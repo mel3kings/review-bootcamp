@@ -11,22 +11,20 @@ public class SelectionSort {
 
     public static void main(String[] args) {
         int[] test = {9, 8, 19, 1234, 33, 1, 2, 34};
-        Arrays.stream(selectionSort(test)).forEach(System.out::println);
+        selectionSort(test);
+        Arrays.stream(test).forEach(System.out::println);
     }
 
-    public static int[] selectionSort(int[] sortMe) {
-        for (int i = 0; i < sortMe.length; i++) {
-            int minimum = i;
-            for (int j = i + 1; j < sortMe.length; j++) {
-                if (sortMe[j] < sortMe[minimum]) {
-                    minimum = j;
+    public static void selectionSort(int[] unsortedArray) {
+        for (int i = 0; i < unsortedArray.length; i++) {
+            for (int j = i + 1; j < unsortedArray.length; j++) {
+                if (unsortedArray[i] > unsortedArray[j]) {
+                    int temp = unsortedArray[i];
+                    unsortedArray[i] = unsortedArray[j];
+                    unsortedArray[j] = temp;
                 }
             }
-            int temp = sortMe[i];
-            sortMe[i] = sortMe[minimum];
-            sortMe[minimum] = temp;
         }
-        return sortMe;
-
     }
 }
+

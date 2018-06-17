@@ -57,7 +57,7 @@ public class MergeSortAlgo {
         }
 
         //we are replacing on the some spots on the unsorted array based on the size of the temp one
-        for (int i = 0; i < temp.length; i++) {
+        for (int i = 0; i < temp.length; i++) { //NOTE start + i on replacing, as our temp is dynamic as well based on size
             unsorted[start + i] = temp[i];
         }
     }

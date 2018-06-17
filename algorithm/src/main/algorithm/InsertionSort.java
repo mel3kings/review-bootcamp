@@ -19,7 +19,7 @@ public class InsertionSort {
             int element = a[i];
             int j = i-1;
             while(j >=0 && a[j] > element){
-                a[j+1] = a[j];
+                a[j+1] = a[j]; // reordering sorted section
                 j--;
             }
             a[j+1] = element;
