@@ -1,11 +1,19 @@
 package algorithm.datastructures;
 
 public class Distance {
-    public final Edge target;
-    public final double weight;
+    private final Edge target;
+    private final double weight;
 
     public Distance(Edge argTarget, double argWeight) {
         target = argTarget;
         weight = argWeight;
+    }
+
+    public Edge getTarget() {
+        return target;
+    }
+
+    public double getWeight() {
+        return weight;
     }
 }
