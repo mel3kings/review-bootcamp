@@ -1,9 +1,8 @@
 package util;
 
-import algorithm.datastructures.Distance;
-import algorithm.datastructures.Edge;
-import algorithm.datastructures.Graph;
+import algorithm.datastructures.*;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.stream.IntStream;
@@ -58,6 +57,36 @@ public class Utils {
         }
         g.setList(list);
         return g;
+    }
+
+    //TREE IS:
+           //       A
+          //   B        F
+         //C       D      G
+        //H  J    E
+    public static Node generateRootNode() {
+        Node nodeA = new Node("A");
+        Node nodeB = new Node("B");
+        Node nodeC = new Node("C");
+        Node nodeD = new Node("D");
+        Node nodeE = new Node("E");
+        Node nodeF = new Node("F");
+        Node nodeG = new Node("G");
+        Node nodeH = new Node("H");
+        Node nodeJ = new Node("J");
+        //build the tree
+
+        nodeC.setLeft(nodeH);
+        nodeC.setRight(nodeJ);
+        nodeD.setLeft(nodeE);
+        nodeB.setLeft(nodeC);
+        nodeB.setRight(nodeD);
+
+        nodeF.setRight(nodeG);
+        nodeA.setLeft(nodeB);
+        nodeA.setRight(nodeF);
+
+        return nodeA;
     }
 
 
