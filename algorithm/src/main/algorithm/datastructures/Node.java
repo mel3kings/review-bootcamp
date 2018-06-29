@@ -2,6 +2,7 @@ package algorithm.datastructures;
 
 
 public class Node {
+    private int key;
     private String data;
     private Node left;
     private Node right;
@@ -11,9 +12,14 @@ public class Node {
         this.data = data;
     }
 
+    public Node(int key, String data){
+        this.key = key;
+        this.data = data;
+    }
     public Node() {
 
     }
+
 
     public String getData() {
         return data;
@@ -45,5 +51,13 @@ public class Node {
 
     public void setRight(Node right) {
         this.right = right;
+    }
+
+    public int getKey() {
+        return key;
+    }
+
+    public void setKey(int key) {
+        this.key = key;
     }
 }
