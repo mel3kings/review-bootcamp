@@ -23,7 +23,7 @@ Must-Reads
 - [Depth First Search](https://github.com/mel3kings/review-bootcamp/blob/master/algorithm/src/main/algorithm/DepthFirst.java)
 - [Binary Search](https://github.com/mel3kings/review-bootcamp/blob/master/algorithm/src/main/algorithm/BinarySearch.java)
 - [Merge Sort](https://github.com/mel3kings/review-bootcamp/blob/master/algorithm/src/main/algorithm/MergeSortAlgo.java)
-- Quick Sort
+- [Quick Sort](https://github.com/mel3kings/review-bootcamp/blob/master/algorithm/src/main/algorithm/QuickSortAlgo.java)
 - [Tree Insert/Find/Delete](https://github.com/mel3kings/review-bootcamp/blob/master/algorithm/src/main/algorithm/datastructures/BinarySearchTree.java)
 - Graphs
 
