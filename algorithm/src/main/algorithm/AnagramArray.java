@@ -1,8 +1,11 @@
 package algorithm;
 
+import java.util.Arrays;
+
 public class AnagramArray {
     public static void main(String[] args) {
         System.out.println(isAnagram("algorithm", "mhtirogla"));
+        System.out.println(isAnagramEight("algorit1hm", "mhtirogla"));
     }
 
     public static boolean isAnagram(String a, String b) {
@@ -20,5 +23,12 @@ public class AnagramArray {
             }
         }
         return true;
+    }
+
+    private static boolean isAnagramEight(String a, String b){
+        int[] asci = new int[256];
+        a.chars().forEach(val ->asci[val]++);
+        b.chars().forEach(val->asci[val]--);
+        return !(Arrays.stream(asci).anyMatch(value -> value != 0));
     }
 }
