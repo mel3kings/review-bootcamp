@@ -30,11 +30,9 @@ public class SoapGenerator {
     return StringUtils.substringBetween(xml, SOAP_BODY_OPEN, SOAP_BODY_CLOSE);
   }
 
-  public static void main(String[] args) throws Exception{
-    Person p = new Person();
-    p.setName("Test");
-    p.setAge(12);
-
+  public static void main(String[] args) throws Exception {
+    Person p = Person.builder()
+        .name("Test").age(12).build();
     String xml = SoapGenerator.soapWrap(XML_MAPPER.writeValueAsString(p));
     log.info("Generated String");
     log.info(xml);
