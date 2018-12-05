@@ -1,4 +1,4 @@
-package brainteasers;
+package crackingcode.brainteasers;
 
 import java.util.LinkedHashSet;
 

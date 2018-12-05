@@ -1,4 +1,4 @@
-package brainteasers;
+package crackingcode.brainteasers;
 
 /**
  * Add arithmetic operators (plus, minus, times, divide)
@@ -14,7 +14,7 @@ public class ArithmeticOperators {
         System.out.println("Addition: 2 + 6 = 8");
         System.out.println("Subtraction: 14 - 6 = 8");
         System.out.println("Division: 48 / 6 = 8");
-        System.out.println("Addition: 1.33 * 6 = 8");
+        System.out.println("Multiplication: 1.33 * 6 = 8");
 
 
         //Step 2 notice that we have 3 1 3 left, so we just need to figure out
