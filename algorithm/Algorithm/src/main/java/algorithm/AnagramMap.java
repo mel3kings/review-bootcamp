@@ -3,9 +3,9 @@ package algorithm;
 import java.util.HashMap;
 
 public class AnagramMap {
-
     public static void main(String[] args) {
         System.out.println(isAnagram("testing", "gnitest"));
+        System.out.println(isAnagramEight("testing", "gnitest"));
     }
 
     public static boolean isAnagram(String a, String b) {
@@ -28,6 +28,24 @@ public class AnagramMap {
                 map.remove(c);
             }
         }
+        return map.isEmpty();
+    }
+
+    private static boolean isAnagramEight(String a, String b) {
+        HashMap<Character, Integer> map = new HashMap<>();
+        a.chars().mapToObj(c -> (char) c).forEach(key ->
+                map.merge(key, 1, (existingValue, defaultValue) -> existingValue + defaultValue));
+        b.chars().mapToObj(c -> (char) c).forEach(key -> {
+            if (!map.containsKey(key)) {
+                map.put(key, -1);
+            }
+            if (map.get(key) > 0) {
+                map.put(key, map.get(key) - 1);
+            }
+            if (map.get(key) == 0) {
+                map.remove(key);
+            }
+        });
         return map.isEmpty();
     }
 }
