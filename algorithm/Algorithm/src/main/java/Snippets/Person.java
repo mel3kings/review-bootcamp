@@ -1,4 +1,4 @@
-package Snippets;
+package snippets;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;

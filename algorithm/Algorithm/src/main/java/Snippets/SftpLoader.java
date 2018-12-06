@@ -1,4 +1,4 @@
-package Snippets;
+package snippets;
 
 
 import com.jcraft.jsch.Channel;
@@ -6,7 +6,6 @@ import com.jcraft.jsch.ChannelSftp;
 import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
-import com.jcraft.jsch.SftpATTRS;
 import com.jcraft.jsch.SftpException;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;

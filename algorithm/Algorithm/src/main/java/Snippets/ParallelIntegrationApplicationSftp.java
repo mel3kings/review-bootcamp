@@ -1,4 +1,4 @@
-package Snippets;
+package snippets;
 
 
 import com.jcraft.jsch.ChannelSftp.LsEntry;

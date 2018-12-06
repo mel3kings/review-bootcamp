@@ -1,4 +1,4 @@
-package crackingcode.stringsAndArrays;
+package crackingcode.stringsandarrays;
 
 import java.util.Arrays;
 

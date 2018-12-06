@@ -1,4 +1,4 @@
-package Snippets;
+package snippets;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;

@@ -1,4 +1,4 @@
-package Snippets;
+package snippets;
 
 import javax.jms.DeliveryMode;
 import javax.jms.Session;

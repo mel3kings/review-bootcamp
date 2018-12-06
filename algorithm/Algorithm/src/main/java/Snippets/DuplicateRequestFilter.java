@@ -1,4 +1,4 @@
-package Snippets;
+package snippets;
 
 import java.math.BigInteger;
 import java.nio.charset.StandardCharsets;

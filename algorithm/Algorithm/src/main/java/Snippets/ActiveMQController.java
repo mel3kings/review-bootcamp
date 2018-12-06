@@ -1,11 +1,11 @@
-package Snippets;
+package snippets;
 
-import static Snippets.Constants.ACKNOWLEDGE_MODE;
-import static Snippets.Constants.DELIVERY_MODE;
-import static Snippets.Constants.ENDPOINT;
-import static Snippets.Constants.PASSWORD;
-import static Snippets.Constants.QUEUE;
-import static Snippets.Constants.USERNAME;
+import static snippets.Constants.ACKNOWLEDGE_MODE;
+import static snippets.Constants.DELIVERY_MODE;
+import static snippets.Constants.ENDPOINT;
+import static snippets.Constants.PASSWORD;
+import static snippets.Constants.QUEUE;
+import static snippets.Constants.USERNAME;
 
 import java.util.stream.IntStream;
 import javax.jms.JMSException;
