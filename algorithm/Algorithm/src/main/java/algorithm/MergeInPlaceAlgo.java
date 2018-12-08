@@ -16,7 +16,7 @@ public class MergeInPlaceAlgo {
 
     public static void sort(int start, int end) {
         if (start < end) {
-            int mid = start + (end - start) / 2;
+            int mid = (start + end) / 2;
             sort(start, mid);
             sort(mid + 1, end);
             merge(start, mid, end);
