@@ -12,9 +12,15 @@ public class MaxSpan {
      * MaxSpan([1, 2, 1, 1, 3]) → 4
      * MaxSpan([1, 4, 2, 1, 4, 1, 4]) → 6
      * MaxSpan([1, 4, 2, 1, 4, 4, 4]) → 6
-     * @param nums
+     *
      * @return
      */
+
+    public static void main(String[] args){
+        MaxSpan n = new MaxSpan();
+        n.maxSpan(new int[]{1,2,1,1,3});
+    }
+
     public int maxSpan(int[] nums) {
         int longestLength = 0;
         for(int i = 0; i <= nums.length; i++){
@@ -28,6 +34,23 @@ public class MaxSpan {
             }
         }
         return longestLength;
+    }
+
+    public int maxSpanV2(int[] nums) {
+        int longestSpan = 0;
+        for (int i = 0; i < nums.length; i++) {
+            int difference = 1;
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] == nums[j]) {
+                    difference = 1 + (j - i);
+                }
+
+            }
+            if (difference > longestSpan) {
+                longestSpan = difference;
+            }
+        }
+        return longestSpan;
     }
 
 }
