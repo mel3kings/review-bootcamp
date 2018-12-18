@@ -42,4 +42,20 @@ public class SumNumbers {
         return total;
     }
 
+    public int sumNumbers2(String str) {
+        int sum = 0;
+        String num = "0";
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (Character.isDigit(ch)) {
+                num += ("" + ch);
+            } else {
+                sum += Integer.parseInt(num);
+                num = "0";
+            }
+        }
+        sum += Integer.parseInt(num);
+        return sum;
+    }
+
 }
