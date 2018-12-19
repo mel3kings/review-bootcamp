@@ -30,7 +30,7 @@ public class HashTableChaining {
 
     public void put(String key, String value) {
         int index = hash(key);
-        HashNode currentNode = contents[index];
+        HashNode currentNode = contents[index];i
         if (null != currentNode) {
             while (currentNode.getNext() != null) {
                 currentNode = currentNode.getNext();
