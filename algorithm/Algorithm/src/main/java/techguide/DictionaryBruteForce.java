@@ -2,11 +2,10 @@ package techguide;
 
 public class DictionaryBruteForce {
 
+
     /**
      * Brute force solution of Dictionary,
-     * Sort the dictionary to longest to smallest and then iterate over each
-     * first occurence is longest
-     *
+     * Sort
      * @param args
      */
     public static void main(String[] args) {
@@ -60,4 +59,6 @@ public class DictionaryBruteForce {
             return false;
         }
     }
+
+
 }

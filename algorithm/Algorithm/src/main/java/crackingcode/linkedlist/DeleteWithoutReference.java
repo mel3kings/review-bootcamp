@@ -25,15 +25,13 @@ public class DeleteWithoutReference {
         System.out.println(head.getNext().getValue());
     }
 
-    public static boolean deleteInPlace(LinkedListNode current){
-        if(null == current || null == current.getNext()){
+    public static boolean deleteInPlace(LinkedListNode current) {
+        if (null == current || current.getNext() == null) {
             return false;
         }
         LinkedListNode next = current.getNext();
         current.setValue(next.getValue());
         current.setNext(next.getNext());
         return true;
-
     }
-
 }

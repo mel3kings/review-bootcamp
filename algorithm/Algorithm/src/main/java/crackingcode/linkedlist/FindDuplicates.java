@@ -3,6 +3,7 @@ package crackingcode.linkedlist;
 import algorithm.datastructures.LinkedListNode;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 
 
 public class FindDuplicates {
@@ -33,18 +34,16 @@ public class FindDuplicates {
     /**
      * Notes: be careful on creating variables inside method it might referring to same node
      * Be wary on while loops make sure it is being updated
+     *
      * @param current
      */
     public static void removeDuplicates(LinkedListNode current) {
         HashMap<String, Boolean> map = new HashMap<>();
-        LinkedListNode previous = null;
-
-        while (current != null) {
-            if (map.containsKey(current.getValue())) {
-                previous.setNext(current.getNext());
-            } else {
-                map.put(current.getValue(), true);
-                previous = current;
+        while (current.getNext() != null) {
+            map.put(current.getValue(), true);
+            LinkedListNode next = current.getNext();
+            if (null != map.get(next.getValue())) {
+                current.setNext(next.getNext());
             }
             current = current.getNext();
         }
