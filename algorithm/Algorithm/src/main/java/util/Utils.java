@@ -89,5 +89,27 @@ public class Utils {
         return nodeA;
     }
 
+    public static LinkedListNode generateSinglyListNode(){
+        LinkedListNode head = new LinkedListNode();
+        head.setValue("head");
+
+        LinkedListNode second = new LinkedListNode();
+        second.setValue("second");
+        head.setNext(second);
+
+        LinkedListNode third = new LinkedListNode();
+        third.setValue("third");
+        second.setNext(third);
+
+        LinkedListNode duplicate = new LinkedListNode();
+        duplicate.setValue("second");
+        third.setNext(duplicate);
+
+        LinkedListNode forth = new LinkedListNode();
+        forth.setValue("forth");
+        duplicate.setNext(forth);
+        return head;
+    }
+
 
 }
