@@ -1,21 +1,24 @@
 package algorithm;
 
 public class Prime {
-    public static void main(String[] args){
-        System.out.println(isPrime(25));
+    public static void main(String[] args) {
+        for (int i = 0; i < 100; i++) {
+            System.out.print("Is " + i + " prime?");
+            System.out.println("" + isPrime(i));
+        }
     }
 
-    public static boolean isPrime(int number){
-        if(number % 2 ==0 || number ==1 ){
+    public static boolean isPrime(int num) {
+        if (num > 2 && num % 2 == 0) {
             return false;
         }
-
-        for(int i =3; i <= number * number; i+=2){
-            if(number % i == 0){
+        for (int i = 3; i < Math.sqrt(num); i += 2) {
+            if (num % i == 0) {
                 return false;
             }
         }
-
         return true;
     }
+
+
 }
