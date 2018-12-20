@@ -5,29 +5,51 @@ import java.util.HashMap;
 public class Trie {
     private TrieNode root = new TrieNode();
 
-    public void insert(String word){
-        HashMap<Character, TrieNode> children = root.getChildren();
+    public static void main(String[] args) {
+        Trie trie = new Trie();
+        trie.insert("ABC");
+        trie.insert("ADD");
+        trie.insert("BDD");
+        System.out.println(trie.contains("ABC"));
+    }
 
-        TrieNode t = null;
-        for(Character c : word.toCharArray()){
-            if(children.containsKey(c)){
-                t = children.get(c);
-            }else{
-                t = new TrieNode();
-                children.put(c,t);
-            }
-            children = t.getChildren();
+    public void insert(String insert) { // ABC
+        HashMap<Character, TrieNode> children = root.getChildren();
+        TrieNode node = null;
+        for (Character c : insert.toCharArray()) {
+            node = children.containsKey(c) ? children.get(c) : new TrieNode();
+            children.put(c, node);
+            children = node.getChildren();
         }
-        if(null != t){
-            t.setEndOfWord(true);
+        if (node != null) {
+            node.setEndOfWord(true);
         }
     }
 
+    public boolean contains(String word) {
+        HashMap<Character, TrieNode> children = root.getChildren();
+        TrieNode node = null;
+        for (Character c : word.toCharArray()) {
+            node = children.get(c);
+        }
+        return node == null ? true : false;
+    }
 
-    public static void main(String[] args){
-        String test = "programming";
-        Trie structure = new Trie();
-        structure.insert(test);
-        System.out.println(structure);
+    class TrieNode {
+        private HashMap<Character, TrieNode> children = new HashMap<>();
+        private boolean endOfWord;
+
+        public HashMap getChildren() {
+            return children;
+        }
+
+        public void setEndOfWord(boolean end) {
+            this.endOfWord = end;
+        }
+
+        public boolean getEndOfWord() {
+            return endOfWord;
+        }
     }
 }
+
