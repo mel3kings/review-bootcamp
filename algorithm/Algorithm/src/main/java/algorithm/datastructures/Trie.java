@@ -1,45 +1,58 @@
 package algorithm.datastructures;
 
 import java.util.HashMap;
+import java.util.LinkedList;
 
 public class Trie {
     private TrieNode root = new TrieNode();
 
     public static void main(String[] args) {
         Trie trie = new Trie();
-        trie.insert("ABC");
-        trie.insert("ADD");
-        trie.insert("BDD");
-        System.out.println(trie.contains("ABC"));
+        trie.insert("onomotopeia");
+        trie.insert("octopus");
+        trie.insert("thisisprobablythelongestwordever");
+        TrieNode longest = trie.findLongest();
+        System.out.println(longest.getActualWord());
+
     }
 
-    public void insert(String insert) { // ABC
-        HashMap<Character, TrieNode> children = root.getChildren();
-        TrieNode node = null;
+    public void insert(String insert) {
+        HashMap<Character, TrieNode> parent = root.getChildren();
+        TrieNode child = null;
         for (Character c : insert.toCharArray()) {
-            node = children.containsKey(c) ? children.get(c) : new TrieNode();
-            children.put(c, node);
-            children = node.getChildren();
+            child = parent.containsKey(c) ? parent.get(c) : new TrieNode();
+            parent.put(c, child);
+            parent = child.getChildren();
+
         }
-        if (node != null) {
-            node.setEndOfWord(true);
+        if (child != null) {
+            child.setEndOfWord(true);
+            child.setActualWord(insert);
         }
     }
 
-    public boolean contains(String word) {
-        HashMap<Character, TrieNode> children = root.getChildren();
-        TrieNode node = null;
-        for (Character c : word.toCharArray()) {
-            node = children.get(c);
+    public TrieNode findLongest() {
+        LinkedList<TrieNode> queue = new LinkedList();
+        queue.push(root);
+        TrieNode current = null;
+        while (!queue.isEmpty()) {
+            current = queue.pop();
+            if (current.getChildren() != null) {
+                for (TrieNode children : current.getChildren().values()) {
+                    queue.push(children);
+                }
+            }
         }
-        return node == null ? true : false;
+        return current;
     }
 
-    class TrieNode {
+
+    public class TrieNode {
         private HashMap<Character, TrieNode> children = new HashMap<>();
         private boolean endOfWord;
+        private String actualWord;
 
-        public HashMap getChildren() {
+        public HashMap<Character, TrieNode> getChildren() {
             return children;
         }
 
@@ -49,6 +62,14 @@ public class Trie {
 
         public boolean getEndOfWord() {
             return endOfWord;
+        }
+
+        public String getActualWord() {
+            return actualWord;
+        }
+
+        public void setActualWord(String actualWord) {
+            this.actualWord = actualWord;
         }
     }
 }
