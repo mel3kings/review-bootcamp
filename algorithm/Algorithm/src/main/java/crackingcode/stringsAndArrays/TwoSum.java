@@ -1,5 +1,6 @@
 package crackingcode.stringsandarrays;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 public class TwoSum {
@@ -18,10 +19,10 @@ public class TwoSum {
      * @param args
      */
     public static void main(String[] args) {
-
+        Arrays.stream(twoSum(new int[]{3,3}, 6)).forEach(System.out::println);
     }
 
-    public int[] twoSum(int[] nums, int target) {
+    public static int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             map.put(nums[i], i);
@@ -29,7 +30,7 @@ public class TwoSum {
 
         for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
-            if (map.containsKey(complement)) {
+            if (map.containsKey(complement) && map.get(complement) != i) {
                 return new int[]{i, map.get(complement)};
             }
         }
