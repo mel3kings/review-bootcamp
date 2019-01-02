@@ -1,39 +1,48 @@
 package algorithm.datastructures;
 
-public class LinkedListNode{
+public class LinkedListNode {
     private String value;
     private LinkedListNode previous;
     private LinkedListNode next;
 
-    public LinkedListNode getPrevious(){
+    public LinkedListNode getPrevious() {
         return this.previous;
     }
 
-    public void setPrevious(LinkedListNode previous){
+    public void setPrevious(LinkedListNode previous) {
         this.previous = previous;
     }
 
-    public void setNext(LinkedListNode next){
+    public void setNext(LinkedListNode next) {
         this.next = next;
     }
 
-    public LinkedListNode getNext(){
+    public LinkedListNode getNext() {
         return this.next;
     }
 
-    public void setValue(String value){
+    public void setValue(String value) {
         this.value = value;
     }
 
-    public String getValue(){
+    public String getValue() {
         return this.value;
     }
 
 
-    public LinkedListNode getHead(){
-        if(this.getPrevious() != null){
+    public LinkedListNode(String value) {
+        this();
+        this.value = value;
+    }
+
+    public LinkedListNode() {
+
+    }
+
+    public LinkedListNode getHead() {
+        if (this.getPrevious() != null) {
             return getPrevious().getHead();
-        }else{
+        } else {
             return this;
         }
     }
