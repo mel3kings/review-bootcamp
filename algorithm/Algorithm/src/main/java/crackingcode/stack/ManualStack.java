@@ -2,6 +2,7 @@ package crackingcode.stack;
 
 public class ManualStack {
     int pointer = 0;
+    int minPointer = 0;
     private static int STACK_SIZE = 2;
     private String[] contents = new String[STACK_SIZE];
 
@@ -14,6 +15,7 @@ public class ManualStack {
         System.out.println(stk.peek());
         System.out.println(stk.pop());
         System.out.println(stk.pop());
+        System.out.println("Minimum Amount :" + stk.min());
     }
 
 
@@ -41,8 +43,16 @@ public class ManualStack {
             }
             contents = newContents;
         }
+
+        if (contents[minPointer] != null && contents[minPointer].compareTo(value) > 0) {
+            minPointer = pointer;
+        }
         contents[pointer] = value;
         pointer++;
+    }
+
+    public String min() {
+        return contents[minPointer];
     }
 
 }
