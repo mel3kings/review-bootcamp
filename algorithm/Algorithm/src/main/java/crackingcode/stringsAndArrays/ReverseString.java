@@ -1,4 +1,4 @@
-package crackingcode.brainteasers;
+package crackingcode.stringsandarrays;
 
 public class ReverseString {
     public static void main(String[] args) {
