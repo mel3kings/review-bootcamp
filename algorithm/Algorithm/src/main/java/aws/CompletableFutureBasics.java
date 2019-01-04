@@ -3,6 +3,7 @@ package aws;
 import org.junit.Test;
 
 import java.util.concurrent.CompletableFuture;
+import java.util.function.Supplier;
 
 public class CompletableFutureBasics {
 
@@ -42,6 +43,19 @@ public class CompletableFutureBasics {
         CompletableFuture.supplyAsync(() -> "Hello").thenApply(s -> s + " World").thenAcceptAsync(s -> {
             System.out.println(s + " is done");
         });
+    }
+
+    /**
+     * Without lambda using supplier is a bit verbose.
+     * @return
+     */
+    private Supplier<String> test(){
+        return new Supplier<String>() {
+            @Override
+            public String get() {
+                return "test";
+            }
+        };
     }
 
 
