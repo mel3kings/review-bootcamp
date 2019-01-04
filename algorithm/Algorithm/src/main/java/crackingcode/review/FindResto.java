@@ -1,7 +1,12 @@
 package crackingcode.review;
 
 
-import java.util.*;
+import lombok.Data;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.TreeMap;
+import java.util.concurrent.CompletableFuture;
 
 public class FindResto {
 
@@ -12,13 +17,14 @@ public class FindResto {
         restos.add(2);
 
         ArrayList<Integer> restos2 = new ArrayList<Integer>();
-        restos2.add(1);
-        restos2.add(2);
+        restos2.add(3);
+        restos2.add(4);
 
         List<List<Integer>> listOfLists = new ArrayList<>();
         listOfLists.add(restos);
         listOfLists.add(restos2);
 
+        mapLocations(listOfLists);
         d.findNearestResto(2, listOfLists, 2);
     }
 
@@ -41,6 +47,19 @@ public class FindResto {
 
         }
         return results;
+    }
+
+    private static CompletableFuture<TreeMap> mapLocations(List<List<Integer>> allResto) {
+        TreeMap<Double, List<Integer>> map = new TreeMap<>();
+        allResto.stream().forEach(s -> {
+            List<Integer> list = s;
+            Double key = s.stream().mapToDouble(Math::sqrt).sum();
+            map.put(key, list);
+        });
+
+        CompletableFuture<TreeMap> future = new CompletableFuture<>();
+        future.complete(map);
+        return future;
     }
 
 
