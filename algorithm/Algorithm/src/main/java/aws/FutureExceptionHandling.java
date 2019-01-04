@@ -3,12 +3,12 @@ package aws;
 import java.util.concurrent.CompletableFuture;
 import java.util.stream.IntStream;
 
-public class NestedException {
+public class FutureExceptionHandling {
 
     public static void main(String[] args) throws Exception {
-        NestedException p = new NestedException();
+        FutureExceptionHandling p = new FutureExceptionHandling();
         CompletableFuture future = CompletableFuture.runAsync(() -> p.counter())
-                .thenRun(NestedException::counter2).exceptionally(t -> {
+                .thenRun(FutureExceptionHandling::counter2).exceptionally(t -> {
                     System.out.println(t.getMessage());
                     return null;
                 })
@@ -17,27 +17,44 @@ public class NestedException {
         future.get();
 
 
-        CompletableFuture parser = CompletableFuture.supplyAsync(() -> "A")
+        CompletableFuture parser = CompletableFuture.supplyAsync(() -> "1")
                 .thenApply(Integer::parseInt)
                 .exceptionally(t -> {
                     t.printStackTrace();
-                    return null;
-                }).thenAcceptAsync(s -> {
-                    System.out.println("RECIEVED: " + s); // this will still continue even if we threw an exception!
-                });
+                    return 0;
+                }).thenAcceptAsync(s -> System.out.println("CORRECT value: " + s));
+
         parser.get();
 
 
-        CompletableFuture correctHandler = CompletableFuture.supplyAsync(() -> "1")
+        CompletableFuture correctHandler = CompletableFuture.supplyAsync(() -> "A")
                 .thenApply(Integer::parseInt)
-                .handle((result, ex) -> { //gives us a way to handle possible exceptions and return default value
-                    System.out.println("HANDLING " + result);
-                    return "1";
+                .handle((result, ex) -> {
+                    if (null != ex) {
+                        ex.printStackTrace();
+                        return 0;
+                    } else {
+                        System.out.println("HANDLING " + result);
+                        return result;
+                    }
                 })
                 .thenAcceptAsync(s -> {
                     System.out.println("CORRECT: " + s);
                 });
         correctHandler.get();
+
+        CompletableFuture correctHandler2 = CompletableFuture.supplyAsync(() -> "A")
+                .thenApply(Integer::parseInt)
+                .whenComplete((result, ex) -> {
+                    if (null != ex) {
+                        ex.printStackTrace();
+                    }
+                })
+                .thenAcceptAsync(s -> {
+                    System.out.println("when Complete: " + s);
+                });
+        correctHandler2.get();
+
     }
 
 
