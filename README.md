@@ -41,13 +41,13 @@ Checklist:
 
 ### Books:
 
- -[ ]  Effective Java 
+ - [ ]  Effective Java 
  
- -[ ] Structure and Interpretation of Computer Programs
+ - [ ] Structure and Interpretation of Computer Programs
  
- -[X] Clean Code
+ - [X] Clean Code
  
- -[X] Clean Architecture
+ - [X] Clean Architecture
  
  -[ ] Code Complete   
  
