@@ -1,4 +1,4 @@
-package bitwise;
+package crackingcode.brainteasers;
 
 public class BitOperators {
     public static void main(String[] args){

@@ -1,4 +1,4 @@
-package crackingcode.cards;
+package crackingcode.design;
 
 public class SampleGame {
     public static void main(String[] args){

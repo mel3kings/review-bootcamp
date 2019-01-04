@@ -1,4 +1,4 @@
-package crackingcode.cards;
+package crackingcode.design;
 
 public class Card {
 

@@ -1,4 +1,4 @@
-package crackingcode.moderate;
+package crackingcode.brainteasers;
 
 public class SwapInPlace {
 
