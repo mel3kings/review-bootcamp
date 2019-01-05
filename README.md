@@ -49,38 +49,40 @@ Checklist:
  
  - [X] Clean Architecture
  
- -[ ] Code Complete   
+ - [ ] Code Complete   
  
- -[ ] The Pragmatic Programmer
+ - [ ] The Pragmatic Programmer
  
- -[ ] Growing Object-Oriented Software
+ - [ ] Growing Object-Oriented Software
  
- -[ ] Refactoring
+ - [ ] Refactoring
  
- -[ ] Design Patterns
+ - [ ] Design Patterns
  
- -[ ] Test Driven Development
+ - [ ] Test Driven Development
  
- -[ ] Elements of Programming Interviews in Java: The Insiders' Guide
+ - [ ] Elements of Programming Interviews in Java: The Insiders' Guide
  
- -[ ] Cracking the Coding Interview
+ - [ ] Cracking the Coding Interview
 
  
 
 ### Papers & Links:
- -[ ] https://martinfowler.com/articles/injection.html
+ - [x] https://martinfowler.com/articles/injection.html
  
- -[ ] http://www.nurkiewicz.com/2013/05/java-8-definitive-guide-to.html
+ - [ ] http://www.nurkiewicz.com/2013/05/java-8-definitive-guide-to.html
  
- -[ ] http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html
+ - [x] http://adit.io/posts/2013-04-17-functors,_applicatives,_and_monads_in_pictures.html
 
 ### Videos:
 
- -[X] Reactive Programming Patterns with Java 8 Futures 
+ - [X] Reactive Programming Patterns with Java 8 Futures 
  
- -[ ] Property Testing
+ - [X] Property Testing
  
- -[ ] Miško Hevery from Google talking about Dependency Injection
+ - [ ] Miško Hevery from Google talking about Dependency Injection
  
- -[ ] A talk from Philip Wadler (responsible for making Generics finally work in Java)
+ - [ ] A talk from Philip Wadler (responsible for making Generics finally work in Java)
 
+### TODO:
+- [ ] https://jqwik.net/
