@@ -35,7 +35,7 @@ public class FindLocation {
         System.out.println(result);
     }
 
-    List<List<Integer>> findNearestLocation(int total, List<List<Integer>> allLocations, int size) {
+    List<List<Integer>> findNearestLocation(int total, List<List<Integer>> allLocations, int numOfReturn) {
         ArrayList<List<Integer>> results = new ArrayList<>();
         TreeMap<Double, List<Integer>> map = new TreeMap<>();
         for (int i = 0; i < total && i < allLocations.size(); i++) {
@@ -47,7 +47,7 @@ public class FindLocation {
             map.put(Math.sqrt(l), list);
         }
         if (map.size() > 0) {
-            for (int get = 0; get < size; get++) {
+            for (int get = 0; get < numOfReturn; get++) {
                 results.add(map.get(map.firstKey()));
                 map.remove(map.firstKey());
             }
