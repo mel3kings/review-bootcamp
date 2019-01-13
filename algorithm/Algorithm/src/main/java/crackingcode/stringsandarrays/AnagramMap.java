@@ -1,11 +1,15 @@
 package crackingcode.stringsandarrays;
 
 import java.util.HashMap;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class AnagramMap {
     public static void main(String[] args) {
-        System.out.println(isAnagram("testing", "gnitest"));
-        System.out.println(isAnagramEight("testing", "gnitest"));
+        System.out.println(isAnagram("testinga", "agnitest"));
+        System.out.println(isAnagramEight("testinga", "agnitest"));
     }
 
     public static boolean isAnagram(String a, String b) {
@@ -32,20 +36,16 @@ public class AnagramMap {
     }
 
     private static boolean isAnagramEight(String a, String b) {
-        HashMap<Character, Integer> map = new HashMap<>();
-        a.chars().mapToObj(c -> (char) c).forEach(key ->
-                map.merge(key, 1, (existingValue, defaultValue) -> existingValue + defaultValue));
-        b.chars().mapToObj(c -> (char) c).forEach(key -> {
-            if (!map.containsKey(key)) {
-                map.put(key, -1);
-            }
-            if (map.get(key) > 0) {
-                map.put(key, map.get(key) - 1);
-            }
-            if (map.get(key) == 0) {
-                map.remove(key);
-            }
-        });
-        return map.isEmpty();
+        Map<Character, Long> map = IntStream.range(0, a.length())
+                .mapToObj(a::charAt)
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
+        IntStream.range(0, b.length())
+                .mapToObj(b::charAt)
+                .forEach(bVal ->
+                        map.compute(bVal, (k, v) -> {
+                            long value = null == v ? -1 : v - 1;
+                            return value;
+                        }));
+        return !map.values().stream().anyMatch(value -> value != 0);
     }
 }
