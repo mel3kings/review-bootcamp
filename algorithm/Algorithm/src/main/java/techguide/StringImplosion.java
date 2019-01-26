@@ -11,7 +11,7 @@ package techguide;
 public class StringImplosion {
 
     public static void main(String[] args){
-
+        stringImplosion("Code");
     }
     public static String stringImplosion(String word){
         StringBuffer sb = new StringBuffer();
