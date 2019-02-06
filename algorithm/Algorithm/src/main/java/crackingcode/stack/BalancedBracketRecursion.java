@@ -4,26 +4,27 @@ import java.util.Stack;
 
 public class BalancedBracketRecursion {
 
+    private static Stack<String> stack = new Stack<>();
+
     public static void main(String[] args) {
         String isBalanced = "[[]][][][[[]]]";
-        Stack<String> s = new Stack<>();
         BalancedBracketRecursion brie = new BalancedBracketRecursion();
-        brie.checkBalance(s, isBalanced);
-        System.out.println("IS BALANCED? " + s.isEmpty());
+        brie.checkBalance(isBalanced);
+        System.out.println("IS BALANCED? " + stack.isEmpty());
     }
 
-    public void checkBalance(Stack<String> stk, String s) {
+    public void checkBalance(String s) {
         if (s.length() == 0) {
             return;
         }
         String check = s.substring(s.length() - 1, s.length());
         if (check.equals("]")) {
-            stk.push(check);
+            stack.push(check);
         } else {
-            if (!stk.isEmpty()) {
-                stk.pop();
+            if (!stack.isEmpty()) {
+                stack.pop();
             }
         }
-        checkBalance(stk, s.substring(0, s.length() - 1));
+        checkBalance(s.substring(0, s.length() - 1));
     }
 }
