@@ -1,4 +1,4 @@
-package hackerrank;
+package hard;
 
 import java.io.IOException;
 import java.util.*;

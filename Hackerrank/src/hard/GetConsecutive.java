@@ -1,4 +1,4 @@
-package hackerrank;
+package hard;
 
 public class GetConsecutive {
 
