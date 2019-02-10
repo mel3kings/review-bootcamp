@@ -13,7 +13,6 @@ public class BetweenTwoSets {
     static int getTotalX(int[] a, int[] b) {
         Arrays.sort(b);
         ArrayList<Integer> considered = new ArrayList<>();
-
         for (int max = b[0]; max > 0; max--) {
             boolean isFactor = true;
             for (int i = 0; i < a.length && isFactor; i++) {
@@ -26,10 +25,8 @@ public class BetweenTwoSets {
             }
         }
         int counter = 0;
-
         for (int j : considered) {
             boolean isFactor = true;
-
             for (int i = 0; i < b.length; i++) {
                 int check = b[i];
                 if (check % j != 0) {
@@ -40,7 +37,6 @@ public class BetweenTwoSets {
             if (isFactor) {
                 counter++;
             }
-
         }
         return counter;
     }
