@@ -41,13 +41,8 @@ public class Dictionary {
                         wordsInPlay.compute(keys, (k, v) -> v + c);
                     }
                 }
-
             }
         }
         return false;
-    }
-
-    private static String[] hello(String a) {
-        return a.split("");
     }
 }

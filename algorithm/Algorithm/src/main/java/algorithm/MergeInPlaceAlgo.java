@@ -27,28 +27,23 @@ public class MergeInPlaceAlgo {
         for (int i = start; i <= end; i++) {
             helper[i] = sorted[i];
         }
-
         int left = start;
-        int right = mid +1;
+        int right = mid + 1;
         int k = start;
-
-        while(left <= mid && right <= end){
-            if(helper[left] <= helper[right]){
+        while (left <= mid && right <= end) {
+            if (helper[left] <= helper[right]) {
                 sorted[k] = helper[left];
                 left++;
-            }else{
+            } else {
                 sorted[k] = helper[right];
                 right++;
             }
             k++;
         }
-
-        while(left <= mid){
+        while (left <= mid) {
             sorted[k] = helper[left];
             k++;
             left++;
         }
-
     }
-
 }
