@@ -34,8 +34,14 @@ Checklist:
 
 ### Books:
 
- - [ ]  Effective Java 
+ - [X]  Effective Java 
  
+ - ![](https://github.com/mel3kings/review-bootcamp/blob/master/effective-java.jpeg)
+  
+ - [X] o'reilly design patterns
+ 
+ - ![](https://github.com/mel3kings/review-bootcamp/blob/master/design-patterns.jpeg)
+
  - [ ] Structure and Interpretation of Computer Programs
  
  - [X] Clean Code
@@ -71,7 +77,6 @@ Checklist:
  - ![](https://github.com/mel3kings/review-bootcamp/blob/master/GoProgrammingLanguage.jpeg)
  
  
-
 ### Papers & Links:
  - [x] https://martinfowler.com/articles/injection.html
  
