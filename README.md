@@ -59,6 +59,8 @@ Checklist:
  - [ ] Cracking the Coding Interview
  
  - [X] Java 8 in Action
+ 
+ - [X] Go the Programming Language
 
  
 
