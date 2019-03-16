@@ -39,9 +39,11 @@ Checklist:
  - [ ] Structure and Interpretation of Computer Programs
  
  - [X] Clean Code
- 
+![](https://github.com/mel3kings/review-bootcamp/blob/master/clean_code.jpeg)
+  
  - [X] Clean Architecture
- 
+ ![](https://github.com/mel3kings/review-bootcamp/blob/master/clean_architecture.jpeg)
+  
  - [ ] Code Complete   
  
  - [ ] The Pragmatic Programmer
@@ -59,9 +61,11 @@ Checklist:
  - [ ] Cracking the Coding Interview
  
  - [X] Java 8 in Action
- 
+  ![](https://github.com/mel3kings/review-bootcamp/blob/master/java-8.jpeg)
+  
  - [X] Go the Programming Language
-
+ ![](https://github.com/mel3kings/review-bootcamp/blob/master/GoProgrammingLanguage.jpeg)
+ 
  
 
 ### Papers & Links:
