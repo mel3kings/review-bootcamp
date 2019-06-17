@@ -39,7 +39,7 @@ public class SftpLoader {
   }
 
   private ChannelSftp connect() throws JSchException {
-    log.info("connecting ...");
+   // log.info("connecting ...");
     JSch jsch = new JSch();
     Session session = jsch.getSession(userName, host, port);
     session.setPassword(password);
@@ -55,14 +55,15 @@ public class SftpLoader {
   }
 
   public void transferDirToRemote(String localDir, String remoteDir) throws SftpException, FileNotFoundException {
-    log.info("local dir: " + localDir + ", remote dir: " + remoteDir);
+   //log.info("local dir: " + localDir + ", remote dir: " + remoteDir);
     File localFile = new File(localDir);
     //channel.mkdir(remoteDir);
-    log.info(channel.pwd());
+    //log.info(channel.pwd());
     System.out.println(channel.ls(channel.pwd()));
 
     channel.cd(remoteDir);
-    log.info("Current FILES: ");
+    // TODO log should work @slf4j
+    //log.info("Current FILES: ");
     System.out.println(channel.ls(channel.pwd()));
 
     for (File localChildFile : localFile.listFiles()) {

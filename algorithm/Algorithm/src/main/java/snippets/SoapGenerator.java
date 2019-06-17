@@ -31,11 +31,12 @@ public class SoapGenerator {
   }
 
   public static void main(String[] args) throws Exception {
-    Person p = Person.builder()
-        .name("Test").age(12).build();
-    String xml = SoapGenerator.soapWrap(XML_MAPPER.writeValueAsString(p));
-    log.info("Generated String");
-    log.info(xml);
+    //TODO lombok annotation breaks from scratch
+//    Person p = Person.builder()
+//        .name("Test").age(12).build();
+//    String xml = SoapGenerator.soapWrap(XML_MAPPER.writeValueAsString(p));
+//    log.info("Generated String");
+//    log.info(xml);
   }
 }
 
