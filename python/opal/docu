@@ -1,0 +1,29 @@
+https://delx.net.au/blog/2016/04/tool-to-get-your-opal-card-travel-data/comment-page-1/
+
+$ opal-card-tool --help
+usage: opal-card-tool [-h] [--num-days NUM_DAYS] [--card-number CARD_NUMBER]
+                      (--load | --show-cards | --show-transactions | --graph-commuter)
+
+Opal card activity fetcher
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --num-days NUM_DAYS   restrict to NUM_DAYS of output
+  --card-number CARD_NUMBER
+                        Opal card number or index (eg: 0,1,etc
+  --load                load any new data from the Opal website
+  --show-cards          show a list of cards
+  --show-transactions   show transactions for card
+  --graph-commuter      draw commuter graph for card with gnuplot
+
+$ opal-card-tool --load
+Username: example
+Password: example
+Loading transactions for 1234567890123456 . done
+
+$ opal-card-tool --show-transactions|head -n2
+number,timestamp,amount,details,fare,fare_applied,fare_discount,journey_number,mode
+1234,2016-01-01 09:00:00,-$4.50,Some St to Some Other St,$4.50,,$0.00,0,bus
+
+Pip3 install lxml
+Pip3 install requests
