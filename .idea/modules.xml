@@ -4,8 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Hackerrank/Hackerrank.iml" filepath="$PROJECT_DIR$/Hackerrank/Hackerrank.iml" />
       <module fileurl="file://$PROJECT_DIR$/concurrency/concurrency.iml" filepath="$PROJECT_DIR$/concurrency/concurrency.iml" />
-      <module fileurl="file://$PROJECT_DIR$/algorithm/Algorithm/src/main/main.iml" filepath="$PROJECT_DIR$/algorithm/Algorithm/src/main/main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/algorithm/Algorithm/src/test/test.iml" filepath="$PROJECT_DIR$/algorithm/Algorithm/src/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hackerrank/node.iml" filepath="$PROJECT_DIR$/Hackerrank/node.iml" />
     </modules>
   </component>
 </project>
