@@ -6,24 +6,31 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
-public class QuickFind implements QuickFindInterface{
-    static int[] arr;
+public class QuickUnion implements QuickFindInterface {
 
-    public QuickFind() {
-        arr = new int[10];
-        IntStream.range(0, 10).forEach(value -> {
-            arr[value] = value;
-        });
+    private static int[] arr = new int[10];
+
+    public QuickUnion() {
+        IntStream.range(0, 10).forEach(i -> arr[i] = i);
+    }
+
+
+    public int getRoot(int a) {
+        if (arr[a] == a) {
+            return arr[a];
+        } else {
+            return getRoot(arr[a]);
+        }
     }
 
     public void Union(int a, int b) {
-        int changeTo = arr[b];
-        int compare = arr[a];
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == compare) {
-                arr[i] = changeTo;
-            }
-        }
+        int i = getRoot(a);
+        int j = getRoot(b);
+        arr[i] = j;
+    }
+
+    public boolean isConnected(int a, int b) {
+        return getRoot(a) == getRoot(b);
     }
 
     private static void print() {
@@ -32,13 +39,10 @@ public class QuickFind implements QuickFindInterface{
                 .collect(Collectors.joining(",")));
     }
 
-    public boolean isConnected(int a, int b) {
-        return arr[a] == arr[b];
-    }
-
     @Test
-    public void TestMe() {
-        QuickFind qf = new QuickFind();
+    public void TestQuickUnion() {
+        QuickUnion qf = new QuickUnion();
+        print();
         qf.Union(4, 3);
         qf.Union(3, 8);
         qf.Union(6, 5);
@@ -47,7 +51,6 @@ public class QuickFind implements QuickFindInterface{
         qf.Union(5, 0);
         qf.Union(7, 2);
         qf.Union(6, 1);
-        print();
         assert (qf.isConnected(0, 7));
         assert (qf.isConnected(3, 9));
         assert (!qf.isConnected(0, 9));
