@@ -24,6 +24,7 @@ public class QuickFind implements QuickFindInterface{
                 arr[i] = changeTo;
             }
         }
+        print();
     }
 
     private static void print() {
@@ -47,7 +48,6 @@ public class QuickFind implements QuickFindInterface{
         qf.Union(5, 0);
         qf.Union(7, 2);
         qf.Union(6, 1);
-        print();
         assert (qf.isConnected(0, 7));
         assert (qf.isConnected(3, 9));
         assert (!qf.isConnected(0, 9));

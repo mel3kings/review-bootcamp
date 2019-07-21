@@ -27,6 +27,7 @@ public class QuickUnion implements QuickFindInterface {
         int i = getRoot(a);
         int j = getRoot(b);
         arr[i] = j;
+        print();
     }
 
     public boolean isConnected(int a, int b) {
