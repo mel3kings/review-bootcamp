@@ -52,10 +52,14 @@ Checklist:
  
  - ![](https://github.com/mel3kings/review-bootcamp/blob/master/clean_architecture.jpeg)
   
- - [ ] Code Complete   
+ - [X] Code Complete   
  
- - [ ] The Pragmatic Programmer
+ - ![](https://github.com/mel3kings/review-bootcamp/blob/master/code_complete.jpeg)
+  
+ - [X] The Pragmatic Programmer
  
+ - ![](https://github.com/mel3kings/review-bootcamp/blob/master/pragmatic_programmer.jpeg)
+  
  - [ ] Growing Object-Oriented Software
  
  - [ ] Refactoring
