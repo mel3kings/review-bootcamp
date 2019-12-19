@@ -1,7 +1,7 @@
 class Solution:
-    def buy_sell(self, nums):
+    def buy_sell(self, prices):
         profit = 0
-        size = len(nums)
+        size = len(prices)
         if size == 0:
             return profit
 
@@ -9,7 +9,7 @@ class Solution:
         for i in range(1, size):
             j = i + 1
             if j < size:
-                difference[i] = nums[j] - nums[i]
+                difference[i] = prices[j] - prices[i]
 
         for i in range(len(difference)):
             if difference[i] > 0:
@@ -18,4 +18,4 @@ class Solution:
 
 
 clas = Solution()
-print(clas.buy_sell([7, 1, 5, 3, 6, 4]))
+print(clas.buy_sell([1, 2, 3, 4, 5]))

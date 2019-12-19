@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="970fe602-5396-451e-b678-6da0b6401b1e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/python/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/playground/image_rotate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/playground/intersection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/playground/plus_one.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/playground/rotate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/playground/single_number.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/python/playground/swap.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/.idea/python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/python/.idea/python.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/python/playground/buy_sell.py" beforeDir="false" afterPath="$PROJECT_DIR$/python/playground/buy_sell.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,14 +46,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="800" />
-  </component>
   <component name="ProjectId" id="1QSdVYVcWo7No7J2iI44935q58G" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="GO_FMT" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="vcs&#9;ACTION&#9;VcsGroups&#10;findLO&#9;FILE&#9;file:///Users/melchortatlonghari/IdeaProjects/review-bootcamp/algorithm/Algorithm/src/main/java/crackingcode/review/FindLocation.java&#10;ver&#9;ACTION&#9;ActivateVersionControlToolWindow" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -135,7 +140,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="tweak" />
-    <option name="LAST_COMMIT_MESSAGE" value="tweak" />
+    <MESSAGE value="update dep" />
+    <option name="LAST_COMMIT_MESSAGE" value="update dep" />
   </component>
   <component name="masterDetails">
     <states>
