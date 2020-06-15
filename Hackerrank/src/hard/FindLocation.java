@@ -1,9 +1,6 @@
-package crackingcode.review;
+package hard;
 
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.TreeMap;
+import java.util.*;
 
 public class FindLocation {
 
@@ -22,8 +19,8 @@ public class FindLocation {
         location3.add(9);
 
         ArrayList<Integer> location4 = new ArrayList<Integer>();
-        location4.add(1);
-        location4.add(2);
+        location4.add(-3);
+        location4.add(4);
 
         List<List<Integer>> listOfLists = new ArrayList<>();
         listOfLists.add(location1);
@@ -37,22 +34,25 @@ public class FindLocation {
 
     List<List<Integer>> findNearestLocation(int total, List<List<Integer>> allLocations, int numOfReturn) {
         ArrayList<List<Integer>> results = new ArrayList<>();
-        TreeMap<Double, List<Integer>> map = new TreeMap<>();
-        for (int i = 0; i < total && i < allLocations.size(); i++) {
-            List<Integer> list = allLocations.get(i);
-            double l = 0.0;
-            for (Integer x : list) {
-                l += x * x;
-            }
-            map.put(Math.sqrt(l), list);
-        }
-        if (map.size() > 0) {
-            for (int get = 0; get < numOfReturn; get++) {
-                results.add(map.get(map.firstKey()));
-                map.remove(map.firstKey());
-            }
+        TreeMap<Double, List<Integer>> shortest = new TreeMap<>();
+        for (int i = 0; i < total; i++) {
+            List<Integer> coordinates = allLocations.get(i);
+            int x = coordinates.get(0);
+            int y = coordinates.get(1);
 
+            double distance = Math.sqrt(Math.pow(-x, 2) + Math.pow(-y, 2));
+            shortest.put(distance, List.of(x, y));
+            System.out.println(distance);
+        }
+        int counter = 0;
+        for (List l : shortest.values()) {
+            results.add(l);
+            if (counter == numOfReturn - 1) {
+                break;
+            }
+            counter++;
         }
         return results;
     }
 }
+
