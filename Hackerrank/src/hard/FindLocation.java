@@ -41,7 +41,10 @@ public class FindLocation {
             int y = coordinates.get(1);
 
             double distance = Math.sqrt(Math.pow(-x, 2) + Math.pow(-y, 2));
-            shortest.put(distance, List.of(x, y));
+            List<Integer>  list = new ArrayList<>();
+            list.add(x);
+            list.add(y);
+            shortest.put(distance, list);
             System.out.println(distance);
         }
         int counter = 0;
