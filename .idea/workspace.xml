@@ -85,7 +85,6 @@
       <change afterPath="$PROJECT_DIR$/out/production/Hackerrank/medium/Permutations.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/Hackerrank/medium/TriangleDisplay.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/out/production/Hackerrank/medium/UnivalTree.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="18c8a58e-361b-4ce8-b814-fe4653aacb37" name="maven" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
@@ -320,17 +319,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CustomerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="main" />
       <useClassPathOnly />
@@ -399,10 +387,10 @@
     <list>
       <item itemvalue="Application.ClimbStairs" />
       <item itemvalue="Application.FindLocation" />
-      <item itemvalue="JUnit.CustomerTest" />
-      <item itemvalue="Spring Boot.ParallelIntegrationApplicationSftp" />
       <item itemvalue="Application.ApplesAndOranges" />
       <item itemvalue="Application.BetweenTwoSets" />
+      <item itemvalue="JUnit.CustomerTest" />
+      <item itemvalue="Spring Boot.ParallelIntegrationApplicationSftp" />
     </list>
     <recent_temporary>
       <list>
@@ -638,11 +626,12 @@
     </state>
     <state x="593" y="320" key="refactoring.ChangeSignatureDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1592099692371" />
     <state x="578" y="336" key="refactoring.ChangeSignatureDialog/0.23.1747.1097@0.23.1747.1097" timestamp="1592095953068" />
-    <state x="584" y="250" width="688" height="702" key="search.everywhere.popup" timestamp="1597137416121">
-      <screen x="0" y="0" width="1792" height="1120" />
+    <state x="584" y="268" width="688" height="688" key="search.everywhere.popup" timestamp="1599976075592">
+      <screen x="0" y="23" width="1792" height="1097" />
     </state>
     <state x="584" y="250" width="688" height="702" key="search.everywhere.popup/0.0.1792.1120@0.0.1792.1120" timestamp="1597137416121" />
     <state x="569" y="268" width="670" height="687" key="search.everywhere.popup/0.23.1747.1097@0.23.1747.1097" timestamp="1592095543553" />
+    <state x="584" y="268" width="688" height="688" key="search.everywhere.popup/0.23.1792.1097@0.23.1792.1097" timestamp="1599976075592" />
     <state x="2417" y="241" width="670" height="676" key="search.everywhere.popup/1792.0.1920.1080/0.0.1792.1120@1792.0.1920.1080" timestamp="1591919784041" />
   </component>
   <component name="XDebuggerManager">
