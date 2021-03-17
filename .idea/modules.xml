@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/concurrency/concurrency.iml" filepath="$PROJECT_DIR$/concurrency/concurrency.iml" />
       <module fileurl="file://$PROJECT_DIR$/algorithm/Algorithm/src/main/main.iml" filepath="$PROJECT_DIR$/algorithm/Algorithm/src/main/main.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hackerrank/node.iml" filepath="$PROJECT_DIR$/Hackerrank/node.iml" />
+      <module fileurl="file://$PROJECT_DIR$/personal-site.iml" filepath="$PROJECT_DIR$/personal-site.iml" />
     </modules>
   </component>
 </project>
