@@ -1,5 +1,7 @@
 package medium;
 
+import java.util.*;
+
 public class TwoPointer {
         public int[] prisonAfterNDays(int[] cells, int n) {
             int[] response = Arrays.copyOfRange(cells, 0, cells.length);
