@@ -1,7 +1,7 @@
 package easy;
 
 import java.util.*;
-//https://leetcode.com/problems/single-row-keyboard/
+//https://leetcode.com/problems/single-row-keyboard/git
 public class CalculateTime {
     class Solution {
         public int calculateTime(String keyboard, String word) {
