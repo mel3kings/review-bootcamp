@@ -1,76 +1,57 @@
 package easy;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class MaxStack {
-    private Integer[] stack;
-    private int p = 0;
-
-    /**
-     * initialize your data structure here.
-     */
+    Stack<Integer> stack;
+    Stack<Integer> maxStack;
+    /** initialize your data structure here. */
     public MaxStack() {
-        stack = new Integer[5];
+        stack = new Stack<>();
+        maxStack = new Stack<>();
     }
 
     public void push(int x) {
-        if (p+1 >= stack.length) {
-            int newSize = stack.length * 2;
-            Integer[] newStack = Arrays.copyOfRange(stack, 0, newSize);
-            stack = newStack;
+        pushHelper(x);
+    }
+
+    public void pushHelper(int x) {
+        int tempMax = maxStack.isEmpty() ? Integer.MIN_VALUE : maxStack.peek();
+        if (x > tempMax) {
+            tempMax = x;
         }
-        stack[p] = x;
-        p++;
+        stack.push(x);
+        maxStack.push(tempMax);
     }
 
     public int pop() {
-        int index= findNextAvailable();
-        int temp = stack[index];
-        stack[index] = null;
-        return temp;
+        maxStack.pop();
+        return stack.pop();
     }
 
     public int top() {
-        int index= findNextAvailable();
-        return stack[index];
+        return stack.peek();
     }
 
     public int peekMax() {
-        int index = findMax();
-        return stack[index];
+        return maxStack.peek();
     }
 
     public int popMax() {
-        int index = findMax();
-        int max = stack[index];
-        stack[index] = null;
+        int max = maxStack.peek();
+        Stack<Integer> temp = new Stack<>();
+
+        while (stack.peek() != max) {
+            temp.push(stack.pop());
+            maxStack.pop();
+        }
+        stack.pop();
+        maxStack.pop();
+        while (!temp.isEmpty()) {
+            int x = temp.pop();
+            pushHelper(x);
+        }
         return max;
-    }
-
-    private int findMax() {
-        Integer max = null;
-        int maxIndex = 0;
-        for (int i = 0; i < stack.length; i++) {
-            Integer curr = stack[stack.length - i - 1];
-            if (curr == null) continue;
-            if (max == null || curr > max) {
-                max = curr;
-                maxIndex = stack.length - i - 1;
-            }
-        }
-        return maxIndex;
-    }
-
-    private int findNextAvailable(){
-        Integer remove = null;
-        while (remove == null) {
-            remove = stack[p];
-            if (remove != null) {
-                return p;
-            }
-            p--;
-        }
-        return p;
     }
 }
 
